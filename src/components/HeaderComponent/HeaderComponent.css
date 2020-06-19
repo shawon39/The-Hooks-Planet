@@ -1,0 +1,11 @@
+.myHeader {
+  height: 100px;
+  background-color: #009270;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.fa-plus{
+  cursor: pointer;
+}

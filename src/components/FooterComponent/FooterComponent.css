@@ -1,0 +1,9 @@
+.footer{
+  height: 150px;
+  background-color: #4A4A4A;
+  color: #ffffff;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
