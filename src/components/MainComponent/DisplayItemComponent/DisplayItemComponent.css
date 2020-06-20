@@ -2,4 +2,12 @@
   height: 100vh;
   border-top: 10px solid #E3E6E3;
   border-bottom: 10px solid #E3E6E3;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.myDisplay{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px 0px;
 }
