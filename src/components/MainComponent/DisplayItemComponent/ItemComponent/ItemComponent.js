@@ -1,15 +1,15 @@
 import React from "react";
 import './ItemComponent.css'
 
-function ItemComponent() {
+function ItemComponent({item}) {
 	return (
 		<div className="myItem">
-			<h6>Item Name </h6>
+			<h6>{item.itemName} </h6>
 			<img
-				src="https://gotchabike.com/wp-content/uploads/2017/09/UNC_ChapelHillBurtsBeesSide-6.png"
+				src={item.itemImage}
 				alt="BikeImage"
 			/>
-			<p>Price : 100 taka </p>
+			<p>Price : {item.price} taka </p>
 			<button className="btn btn-sm btn-dark">Details</button>
 		</div>
 	);

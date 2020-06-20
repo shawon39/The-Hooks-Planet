@@ -5,7 +5,7 @@ function AddItemComponent() {
 	return (
 		<div>
 			<span>
-				<i class="fas fa-plus"> Add Item </i>
+				<i className="fas fa-plus"> Add Item </i>
 			</span>
 		</div>
 	);
