@@ -2,47 +2,26 @@ import React, { useContext } from "react";
 import "./CategoryComponent.css";
 import { ItemContext } from "../../../App";
 
+const category = ["All", "Bike", "Mobile", "iPhone", "Tab", "Band"];
+
 function CategoryComponent() {
 	const itemsContext = useContext(ItemContext);
+	console.log(itemsContext.activeCategory);
 	return (
 		<div className="category">
 			<ul className="list-group">
-				<li
-					onClick={() => itemsContext.itemDispatch("All")}
-					className="list-group-item active"
-				>
-					All
-				</li>
-				<li
-					onClick={() => itemsContext.itemDispatch("Bike")}
-					className="list-group-item"
-				>
-					Bike
-				</li>
-				<li
-					onClick={() => itemsContext.itemDispatch("Mobile")}
-					className="list-group-item"
-				>
-					Mobile
-				</li>
-				<li
-					onClick={() => itemsContext.itemDispatch("iPhone")}
-					className="list-group-item"
-				>
-					iPhone
-				</li>
-				<li
-					onClick={() => itemsContext.itemDispatch("Tab")}
-					className="list-group-item"
-				>
-					Tab
-				</li>
-				<li
-					onClick={() => itemsContext.itemDispatch("Cookies")}
-					className="list-group-item"
-				>
-					Cookies
-				</li>
+				{category.map((item) => (
+					<li
+						key={item}
+						onClick={() => itemsContext.itemDispatch(item)}
+						className={
+							"list-group-item " +
+							(itemsContext.activeCategory === item ? "active" : "")
+						}
+					>
+						{item}
+					</li>
+				))}
 			</ul>
 		</div>
 	);

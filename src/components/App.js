@@ -3,35 +3,46 @@ import "./App.css";
 import HeaderComponent from "./HeaderComponent/HeaderComponent";
 import MainComponent from "./MainComponent/MainComponent";
 import FooterComponent from "./FooterComponent/FooterComponent";
-import { initialState } from "../items";
+import { initialState } from "../data/items";
+
+let activeCategory = "All";
 
 const reducer = (state, action) => {
 	let AllItems = initialState;
 	switch (action) {
-		case "All":
+		case "All": {
+			activeCategory = "All";
 			return initialState;
+		}
 		case "Bike": {
 			AllItems = initialState;
+			activeCategory = "Bike";
 			return AllItems.filter((myState) => myState.type === "Bike");
 		}
 		case "Mobile": {
 			AllItems = initialState;
+			activeCategory = "Mobile";
 			return AllItems.filter((myState) => myState.type === "Mobile");
 		}
 		case "iPhone": {
 			AllItems = initialState;
+			activeCategory = "iPhone";
 			return AllItems.filter((myState) => myState.type === "iPhone");
 		}
 		case "Tab": {
 			AllItems = initialState;
+			activeCategory = "Tab";
 			return AllItems.filter((myState) => myState.type === "Tab");
 		}
-		case "Cookies": {
+		case "Band": {
 			AllItems = initialState;
-			return AllItems.filter((myState) => myState.type === "Cookies");
+			activeCategory = "Band";
+			return AllItems.filter((myState) => myState.type === "Band");
 		}
-		default:
+		default: {
+			activeCategory = "All";
 			return initialState;
+		}
 	}
 };
 
@@ -49,7 +60,11 @@ function App() {
 			<section className="row">
 				<div className="col-sm-12">
 					<ItemContext.Provider
-						value={{ items: items, itemDispatch: dispatch }}
+						value={{
+							items: items,
+							itemDispatch: dispatch,
+							activeCategory: activeCategory,
+						}}
 					>
 						<MainComponent />
 					</ItemContext.Provider>

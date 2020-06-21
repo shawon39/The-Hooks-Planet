@@ -1,8 +1,17 @@
 .category li {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .category li.active {
-  border: 0;
-  background-color:#009270;
+	border: 0;
+	background-color: #009270;
+	z-index: 0;
+}
+
+.closeCls {
+	float: left;
+}
+
+.submit {
+	float: right;
 }
