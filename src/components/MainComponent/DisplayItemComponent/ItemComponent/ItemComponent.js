@@ -7,7 +7,7 @@ function ItemComponent({item}) {
 			<h6>{item.itemName} </h6>
 			<img
 				src={item.itemImage}
-				alt="BikeImage"
+				alt={item.type}
 			/>
 			<p>Price : {item.price} taka </p>
 			<button className="btn btn-sm btn-dark">Details</button>

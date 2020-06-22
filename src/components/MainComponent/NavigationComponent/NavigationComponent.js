@@ -1,13 +1,13 @@
-import React from 'react'
-import './NavigationComponent.css';
-import CategoryComponent from './CategoryComponent/CategoryComponent';
+import React from "react";
+import "./NavigationComponent.css";
+import CategoryComponent from "./CategoryComponent/CategoryComponent";
 
 function NavigationComponent() {
-  return (
-    <div className="navigation">
-      <CategoryComponent/>
-    </div>
-  )
+	return (
+		<div className="navigation">
+			<CategoryComponent />
+		</div>
+	);
 }
 
-export default NavigationComponent
+export default NavigationComponent;

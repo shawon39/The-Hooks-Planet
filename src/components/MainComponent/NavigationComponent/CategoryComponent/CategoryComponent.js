@@ -6,14 +6,13 @@ const category = ["All", "Bike", "Mobile", "iPhone", "Tab", "Band"];
 
 function CategoryComponent() {
 	const itemsContext = useContext(ItemContext);
-	console.log(itemsContext.activeCategory);
 	return (
 		<div className="category">
 			<ul className="list-group">
 				{category.map((item) => (
 					<li
 						key={item}
-						onClick={() => itemsContext.itemDispatch(item)}
+						onClick={() => itemsContext.itemDispatch({ type: item })}
 						className={
 							"list-group-item " +
 							(itemsContext.activeCategory === item ? "active" : "")

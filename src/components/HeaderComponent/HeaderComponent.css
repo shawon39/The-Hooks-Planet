@@ -1,11 +1,29 @@
 .myHeader {
-  height: 100px;
-  background-color: #009270;
-  color: #FFFFFF;
-  text-align: center;
-  padding-top: 30px;
+	height: 100px;
+	background-color: #009270;
+	color: #ffffff;
+	text-align: center;
+	padding-top: 30px;
 }
 
-.fa-plus{
-  cursor: pointer;
+.fa-plus {
+	cursor: pointer;
+}
+
+.form-group {
+	display: flex;
+}
+.form-group > label {
+	width: 20%;
+	margin-top: 15px;
+}
+
+.form-group .selectLabel {
+	margin-top: 5px;
+}
+
+.form-group > input,
+.form-group > select,
+.form-group > textarea {
+	width: 80%;
 }

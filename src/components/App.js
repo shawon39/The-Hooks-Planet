@@ -9,7 +9,7 @@ let activeCategory = "All";
 
 const reducer = (state, action) => {
 	let AllItems = initialState;
-	switch (action) {
+	switch (action.type) {
 		case "All": {
 			activeCategory = "All";
 			return initialState;
@@ -39,6 +39,12 @@ const reducer = (state, action) => {
 			activeCategory = "Band";
 			return AllItems.filter((myState) => myState.type === "Band");
 		}
+		case "AddItem": {
+			AllItems = initialState;
+			activeCategory = action.item.type;
+			AllItems.push(action.item);
+			return AllItems.filter((myState) => myState.type === activeCategory);
+		}
 		default: {
 			activeCategory = "All";
 			return initialState;
@@ -54,7 +60,9 @@ function App() {
 		<div className="App container">
 			<section className="row">
 				<div className="col-sm-12">
-					<HeaderComponent />
+					<ItemContext.Provider value={{ itemDispatch: dispatch }}>
+						<HeaderComponent />
+					</ItemContext.Provider>
 				</div>
 			</section>
 			<section className="row">
