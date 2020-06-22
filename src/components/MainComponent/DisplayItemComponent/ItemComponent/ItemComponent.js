@@ -39,7 +39,7 @@ function ItemComponent({ item }) {
 				<div className="detailsModal">
 					<h4>{item.itemName} </h4>
 					<div className="ImagePrice">
-						<img src={item.itemImage} alt={item.type} />
+						<img src={require(`../../../../data/Image/${item.itemImage}`)} alt={item.type} />
 						<p> <strong>Price :  ৳ {item.price} </strong> </p>
 					</div>
 					<p>{item.description}</p>
