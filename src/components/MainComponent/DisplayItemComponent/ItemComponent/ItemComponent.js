@@ -22,7 +22,7 @@ function ItemComponent({ item }) {
 		<React.Fragment>
 			<div className="myItem">
 				<h6>{item.itemName} </h6>
-				<img src={item.itemImage} alt={item.type} />
+				<img src={require(`../../../../data/Image/${item.itemImage}`)} alt={item.type} />
 				<p>Price :  ৳ {item.price}  </p>
 				<button
 					className="btn btn-sm btn-dark"
