@@ -11,3 +11,23 @@
   height: 70px;
   width: 100px;
 }
+
+.detailsModal {
+  text-align: center;
+}
+
+.detailsModal > div > img {
+  height: 120px;
+  width: 150px;
+  width: 50%;
+}
+
+.ImagePrice {
+  display: flex;
+  padding: 10px;
+}
+
+.ImagePrice > p {
+  width: 50%;
+  margin-top: 40px;
+}

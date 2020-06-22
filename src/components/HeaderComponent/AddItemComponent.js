@@ -13,8 +13,8 @@ const customStyles = {
 		marginRight: "-50%",
 		transform: "translate(-50%, -50%)",
 		height: "fit-content",
-		width: "600px",
-		backgroundColor: "#009270",
+		width: "500px",
+		backgroundColor: "rgba(59, 146, 126, 0.88)",
 	},
 };
 
@@ -71,7 +71,7 @@ function AddItemComponent() {
 				<div className="form-group">
 					<label htmlFor="Item No">Item No</label>
 					<input
-						className="form-control my-2"
+						className="form-control"
 						type="number"
 						placeholder="Item no"
 						onChange={(event) =>
@@ -101,7 +101,7 @@ function AddItemComponent() {
 				<div className="form-group">
 					<label htmlFor="Item Name">Item Name</label>
 					<input
-						className="form-control my-2"
+						className="form-control"
 						type="text"
 						placeholder="Item name"
 						onChange={(event) =>
@@ -112,7 +112,7 @@ function AddItemComponent() {
 				<div className="form-group">
 					<label htmlFor="Price">Price</label>
 					<input
-						className="form-control my-2"
+						className="form-control"
 						type="number"
 						placeholder="Price"
 						onChange={(event) =>
@@ -123,7 +123,7 @@ function AddItemComponent() {
 				<div className="form-group">
 					<label htmlFor="url">Picture url</label>
 					<input
-						className="form-control my-2"
+						className="form-control"
 						type="text"
 						placeholder="Picture url"
 						onChange={(event) =>
@@ -134,7 +134,7 @@ function AddItemComponent() {
 				<div className="form-group">
 					<label htmlFor="description">Description</label>
 					<textarea
-						className="form-control my-2"
+						className="form-control"
 						type="text"
 						placeholder="Description"
 						rows="3"

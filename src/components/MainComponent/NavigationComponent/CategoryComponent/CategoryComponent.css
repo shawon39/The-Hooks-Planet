@@ -15,3 +15,8 @@
 .submit {
 	float: right;
 }
+
+.category i {
+	height: 20px;
+	width: 20px;
+}
