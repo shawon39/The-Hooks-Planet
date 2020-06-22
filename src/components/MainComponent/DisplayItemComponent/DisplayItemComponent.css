@@ -1,13 +1,31 @@
-.displayItem{
-  height: 100vh;
-  border-top: 10px solid #E3E6E3;
-  border-bottom: 10px solid #E3E6E3;
-  padding-top: 10px;
-  padding-left: 10px;
+.displayItem {
+	height: 100vh;
+	border-top: 10px solid #e3e6e3;
+	border-bottom: 10px solid #e3e6e3;
+	padding-top: 10px;
+	padding-left: 10px;
+	position: relative;
 }
 
-.myDisplay{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px 0px;
+.myDisplay {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px 0px;
+}
+
+.itemPaginate {
+	position: absolute;
+	bottom: 0;
+	top: 95%;
+	left: 45%;
+	transform: translate(-50%, -50%);
+}
+
+.pagination .page-item.active .page-link {
+	background-color: #009270;
+	border-color: #009270;
+}
+
+.pagination .page-item.active .page-link:focus {
+	box-shadow: none;
 }

@@ -153,6 +153,7 @@ function AddItemComponent() {
 					onClick={() => {
 						itemsContext.itemDispatch({ type: "AddItem", item: item });
 						setIsModalOpen(false);
+						dispatch({type: "default"})
 					}}
 					className="btn btn-sm btn-dark submit"
 				>

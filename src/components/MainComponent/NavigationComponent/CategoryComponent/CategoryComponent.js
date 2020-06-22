@@ -36,14 +36,14 @@ function CategoryComponent() {
 			<ul className="list-group">
 				{category.map((item) => (
 					<li
-						key={item}
+						key={item.itemName}
 						onClick={() => itemsContext.itemDispatch({ type: item.itemName })}
 						className={
 							"list-group-item " +
 							(itemsContext.activeCategory === item.itemName ? "active" : "")
 						}
 					>
-						<i class={item.iconName}></i> {item.itemName}
+						<i className={item.iconName}></i> {item.itemName}
 					</li>
 				))}
 			</ul>
