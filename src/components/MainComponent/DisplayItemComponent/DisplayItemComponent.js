@@ -17,7 +17,9 @@ function DisplayItemComponent() {
 		indexOfLastItem
 	);
 
-	const paginate = (pageNumber) => setCurrentPage(pageNumber);
+	const paginate = (pageNumber) => {
+		setCurrentPage(pageNumber)
+	};
 
 	return (
 		<div className="displayItem">
@@ -32,8 +34,9 @@ function DisplayItemComponent() {
 				<Pagination
 					itemPerPage={itemPerPage}
 					totalItems={itemsContext.items.length}
+					currentPage={currentPage}
 					paginate={paginate}
-					currentPage = {currentPage}
+					
 				/>
 			</div>
 		</div>

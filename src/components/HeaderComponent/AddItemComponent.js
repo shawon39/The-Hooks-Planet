@@ -23,7 +23,7 @@ const initialItem = {
 	itemName: "",
 	type: "",
 	price: 0,
-	itemImage: "",
+	itemImage: "Band/no-image-available.jpg",
 	description: "",
 };
 

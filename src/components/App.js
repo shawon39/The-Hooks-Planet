@@ -72,6 +72,7 @@ function App() {
 							items: items,
 							itemDispatch: dispatch,
 							activeCategory: activeCategory,
+							itemCurrentPage: 1
 						}}
 					>
 						<MainComponent />
