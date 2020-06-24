@@ -1,5 +1,5 @@
 import React from "react";
-import './DisplayItemComponent.css';
+import "./DisplayItemComponent.css";
 
 function Pagination({ itemPerPage, totalItems, paginate, currentPage }) {
 	const pageNumbers = [];
@@ -21,9 +21,9 @@ function Pagination({ itemPerPage, totalItems, paginate, currentPage }) {
 						key={number}
 						className={"page-item " + (number === currentPage ? "active" : "")}
 					>
-						<a href="!#" onClick={() => paginate(number)} className="page-link">
+						<span onClick={() => paginate(number)} className="page-link">
 							{number}
-						</a>
+						</span>
 					</li>
 				))}
 			</ul>

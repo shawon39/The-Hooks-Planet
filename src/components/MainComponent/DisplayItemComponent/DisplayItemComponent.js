@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./DisplayItemComponent.css";
 import ItemComponent from "./ItemComponent/ItemComponent";
 import { ItemContext } from "../../App";
@@ -6,7 +6,7 @@ import Pagination from "./Pagination";
 
 function DisplayItemComponent() {
 	const itemsContext = useContext(ItemContext);
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useState(itemsContext.itemCurrentPage);
 	const itemPerPage = 8;
 
 	// get Current items
@@ -18,8 +18,12 @@ function DisplayItemComponent() {
 	);
 
 	const paginate = (pageNumber) => {
-		setCurrentPage(pageNumber)
+		setCurrentPage(pageNumber);
 	};
+
+	useEffect(() => {
+		setCurrentPage(1);
+	}, [itemsContext.items]);
 
 	return (
 		<div className="displayItem">
@@ -36,7 +40,6 @@ function DisplayItemComponent() {
 					totalItems={itemsContext.items.length}
 					currentPage={currentPage}
 					paginate={paginate}
-					
 				/>
 			</div>
 		</div>
