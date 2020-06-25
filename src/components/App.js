@@ -45,6 +45,10 @@ const reducer = (state, action) => {
 			AllItems.push(action.item);
 			return AllItems.filter((myState) => myState.type === activeCategory);
 		}
+		case "SearchItem" : {
+			AllItems = initialState;
+			return AllItems.filter((myState) => myState.itemName.includes(action.searchKey))
+		}
 		default: {
 			activeCategory = "All";
 			return initialState;

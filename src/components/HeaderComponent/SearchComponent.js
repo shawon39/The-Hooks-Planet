@@ -1,12 +1,24 @@
-import React from 'react'
-import './HeaderComponent.css'
+import React, { useContext } from "react";
+import "./HeaderComponent.css";
+import { ItemContext } from "../App";
 
 function SearchComponent() {
-  return (
-    <div>
-      <input type="text" className="form-control" placeholder="Search here.."/>
-    </div>
-  )
+	const itemsContext = useContext(ItemContext);
+	return (
+		<div>
+			<input
+				onChange={(e) => {
+					itemsContext.itemDispatch({
+						type: "SearchItem",
+						searchKey: e.target.value,
+					});
+				}}
+				type="text"
+				className="form-control"
+				placeholder="Search here.."
+			/>
+		</div>
+	);
 }
 
-export default SearchComponent
+export default SearchComponent;
