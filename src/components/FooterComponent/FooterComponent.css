@@ -1,9 +1,27 @@
+
 .footer{
-  height: 150px;
+  text-align: center;
+  height: fit-content;
   background-color: #4A4A4A;
-  color: #ffffff;
+  color: #A1BAAF;
   margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.footer  h5 {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.footer p {
+  line-height: 10px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
