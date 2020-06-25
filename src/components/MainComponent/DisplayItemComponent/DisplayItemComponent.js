@@ -7,7 +7,7 @@ import Pagination from "./Pagination";
 function DisplayItemComponent() {
 	const itemsContext = useContext(ItemContext);
 	const [currentPage, setCurrentPage] = useState(itemsContext.itemCurrentPage);
-	const itemPerPage = 8;
+	const itemPerPage = 12;
 
 	// get Current items
 	const indexOfLastItem = currentPage * itemPerPage;

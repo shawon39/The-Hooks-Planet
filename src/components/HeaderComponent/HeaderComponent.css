@@ -26,3 +26,8 @@
 .form-group > textarea {
 	width: 80%;
 }
+
+.myHeader h6 {
+	margin-top: 5px;
+    font-family: cursive;
+}
