@@ -7,6 +7,15 @@ import { initialState } from "../data/items";
 
 let activeCategory = "All";
 
+const filterPrice = {
+  All : [10000,20000,50000,100000,200000],
+  Bike : [40000,60000,80000,100000,200000],
+  Mobile : [10000,20000,30000,50000,100000],
+  iPhone : [10000,20000,50000,100000,200000],
+  Tab : [10000,20000,50000,100000,100000],
+  Band : [1000,2000,5000,10000,20000],
+}
+
 const reducer = (state, action) => {
 	let AllItems = initialState;
 	switch (action.type) {

@@ -1,0 +1,23 @@
+.FilterBtn {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.FilterBtn > button {
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #009270;
+  color: #ffffff;
+}
+
+.FilterBtn > button:focus {
+  box-shadow: none;
+}
+
+.FilterBtn > h6 {
+  padding-top: 25px;
+  height: 70px;
+  width: 100%;
+  background-color: #009270;
+  color: #ffffff;
+}
