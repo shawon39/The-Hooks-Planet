@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6b26b4585c07f776f2583e90cc9fa390",
+    "revision": "ddce143bb37c82e4fbabf5e96f9f0903",
     "url": "/The-Hooks-Planet/index.html"
   },
   {
-    "revision": "b9a3ec82ede36b3c91c9",
-    "url": "/The-Hooks-Planet/static/css/main.92159390.chunk.css"
+    "revision": "3310a67431fe31ff02a6",
+    "url": "/The-Hooks-Planet/static/css/main.d2a4cd6d.chunk.css"
   },
   {
     "revision": "3b5f8160680d33ceb67e",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/The-Hooks-Planet/static/js/2.772372fc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b9a3ec82ede36b3c91c9",
-    "url": "/The-Hooks-Planet/static/js/main.396d6d02.chunk.js"
+    "revision": "3310a67431fe31ff02a6",
+    "url": "/The-Hooks-Planet/static/js/main.fa26075e.chunk.js"
   },
   {
     "revision": "6853afb9422c53348397",
