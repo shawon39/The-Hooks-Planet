@@ -10,24 +10,37 @@
 	cursor: pointer;
 }
 
-.form-group {
+.form-group > div {
 	display: flex;
 }
-.form-group > label {
-	width: 20%;
+.form-group > div > label {
+	width: 22%;
 }
 
-.form-group .selectLabel {
+.form-group > div > .selectLabel {
 	margin-top: 5px;
 }
 
-.form-group > input,
-.form-group > select,
-.form-group > textarea {
-	width: 80%;
+.form-group > div > input,
+.form-group > div > select,
+.form-group > div > textarea {
+	width: 78%;
 }
 
 .myHeader h6 {
 	margin-top: 5px;
-    font-family: cursive;
+	font-family: cursive;
+}
+
+.form-group > div .required {
+	position: absolute;
+	margin-left: 3px;
+	margin-top: 3px;
+	color: red;
+	font-size: 20px;
+}
+.form-group p {
+	color: #bd2130;
+	font-size: 13px;
+	margin-bottom: 5px;
 }

@@ -53,6 +53,41 @@ const reducer = (state, action) => {
 	}
 };
 
+const removeErrors = () => {
+	const requiredFieldsFields = document.querySelectorAll(".requiredFields");
+	requiredFieldsFields.forEach((field) => {
+		var elements = field.getElementsByTagName("P");
+		while (elements[0]) elements[0].parentNode.removeChild(elements[0]);
+	});
+}
+
+const checkValidation = (item) => {
+	removeErrors();
+	if (item.Id && item.itemName && item.type && item.price > 0) {
+		return true;
+	}
+	const requiredFieldsFields = document.querySelectorAll(".requiredFields");
+	requiredFieldsFields.forEach((field) => {
+
+		if(field.getElementsByTagName("select").length) {
+			var selectedVal = field.getElementsByTagName("select");
+			if(selectedVal[0].options[selectedVal[0].selectedIndex].value == "DEFAULT") {
+				var node = document.createElement("P");
+				var nodeText = document.createTextNode("Fill up the required fields!");
+				node.appendChild(nodeText);
+				field.prepend(node);
+			}
+		}
+		else if (!field.getElementsByTagName("input")[0].value) {
+			var node = document.createElement("P");
+			var nodeText = document.createTextNode("Fill up the required fields!");
+			node.appendChild(nodeText);
+			field.prepend(node);
+		}
+	});
+	return false;
+};
+
 function AddItemComponent() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [item, dispatch] = useReducer(reducer, initialItem);
@@ -68,80 +103,100 @@ function AddItemComponent() {
 				style={customStyles}
 			>
 				<h5 className="text-center">Add an Item</h5>
-				<div className="form-group">
-					<label htmlFor="Item No">Item No</label>
-					<input
-						className="form-control"
-						type="number"
-						placeholder="Item no"
-						onChange={(event) =>
-							dispatch({ type: "Id", value: event.target.value })
-						}
-					/>
+				<div className="form-group requiredFields">
+					<div>
+						<label htmlFor="Item No">
+							Item No <span className="required">*</span>
+						</label>
+						<input
+							className="form-control"
+							type="number"
+							placeholder="Item no"
+							onChange={(event) =>
+								dispatch({ type: "Id", value: event.target.value })
+							}
+						/>
+					</div>
+				</div>
+				<div className="form-group requiredFields">
+					<div>
+						<label className="selectLabel">
+							Select Type <span className="required">*</span>
+						</label>
+						<select
+							defaultValue={"DEFAULT"}
+							className="form-control"
+							onChange={(event) =>
+								dispatch({ type: "type", value: event.target.value })
+							}
+						>
+							<option value="DEFAULT" disabled>
+								Choose Item Type
+							</option>
+							<option value="Bike">Bike</option>
+							<option value="Mobile">Mobile</option>
+							<option value="iPhone">iPhone</option>
+							<option value="Tab">Tab</option>
+							<option value="Band">Band</option>
+						</select>
+					</div>
+				</div>
+				<div className="form-group requiredFields">
+					<div>
+						<label htmlFor="Item Name">
+							Item Name <span className="required">*</span>
+						</label>
+						<input
+							className="form-control"
+							type="text"
+							placeholder="Item name"
+							onChange={(event) =>
+								dispatch({ type: "itemName", value: event.target.value })
+							}
+						/>
+					</div>
+				</div>
+				<div className="form-group requiredFields">
+					<div>
+						<label htmlFor="Price">
+							Price <span className="required">*</span>
+						</label>
+						<input
+							className="form-control"
+							type="number"
+							placeholder="Price"
+							onChange={(event) =>
+								dispatch({ type: "price", value: event.target.value })
+							}
+						/>
+					</div>
 				</div>
 				<div className="form-group">
-					<label className="selectLabel">Select Type</label>
-					<select
-						defaultValue={"DEFAULT"}
-						className="form-control"
-						onChange={(event) =>
-							dispatch({ type: "type", value: event.target.value })
-						}
-					>
-						<option value="DEFAULT" disabled>
-							Choose Item Type
-						</option>
-						<option value="Bike">Bike</option>
-						<option value="Mobile">Mobile</option>
-						<option value="iPhone">iPhone</option>
-						<option value="Tab">Tab</option>
-						<option value="Band">Band</option>
-					</select>
+					<div>
+						<label htmlFor="url">Picture url</label>
+						<input
+							className="form-control"
+							type="text"
+							placeholder="Picture url"
+							onChange={(event) =>
+								dispatch({ type: "itemImage", value: event.target.value })
+							}
+						/>
+					</div>
 				</div>
 				<div className="form-group">
-					<label htmlFor="Item Name">Item Name</label>
-					<input
-						className="form-control"
-						type="text"
-						placeholder="Item name"
-						onChange={(event) =>
-							dispatch({ type: "itemName", value: event.target.value })
-						}
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="Price">Price</label>
-					<input
-						className="form-control"
-						type="number"
-						placeholder="Price"
-						onChange={(event) =>
-							dispatch({ type: "price", value: event.target.value })
-						}
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="url">Picture url</label>
-					<input
-						className="form-control"
-						type="text"
-						placeholder="Picture url"
-						onChange={(event) =>
-							dispatch({ type: "itemImage", value: event.target.value })
-						}
-					/>
-				</div>
-				<div className="form-group">
-					<label htmlFor="description">Description</label>
-					<textarea
-						className="form-control"
-						type="text"
-						placeholder="Description"
-						rows="3"
-						onChange={(event) =>
-							dispatch({ type: "description", value: event.target.value })
-						}
-					/>
+					<div>
+						<label htmlFor="description">Description</label>
+						<textarea
+							className="form-control"
+							type="text"
+							placeholder="Description"
+							rows="3"
+							onChange={(event) =>
+								dispatch({ type: "description", value: event.target.value })
+							}
+						/>
+					</div>
 				</div>
 				<button
 					className="btn btn-sm btn-dark closeCls"
@@ -151,9 +206,11 @@ function AddItemComponent() {
 				</button>
 				<button
 					onClick={() => {
-						itemsContext.itemDispatch({ type: "AddItem", item: item });
-						setIsModalOpen(false);
-						dispatch({type: "default"})
+						if (checkValidation(item)) {
+							itemsContext.itemDispatch({ type: "AddItem", item: item });
+							setIsModalOpen(false);
+							dispatch({ type: "default" });
+						}
 					}}
 					className="btn btn-sm btn-dark submit"
 				>
