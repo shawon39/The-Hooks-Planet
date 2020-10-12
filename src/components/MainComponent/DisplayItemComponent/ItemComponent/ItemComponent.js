@@ -18,18 +18,25 @@ const customStyles = {
 
 function ItemComponent({ item }) {
 	const [isOpenModal, setIsOpenModal] = useState(false);
+	const [isDeleteOpenModal, setIsDeleteOpenModal] = useState(false);
 	return (
 		<React.Fragment>
 			<div className="myItem">
 				<h6>{item.itemName} </h6>
-				<img src={require(`../../../../data/Image/${item.itemImage}`)} alt={item.type} />
-				<p>Price :  ৳ {item.price}  </p>
-				<button
-					className="btn btn-sm btn-dark"
-					onClick={() => setIsOpenModal(true)}
-				>
-					Details
-				</button>
+				<img
+					src={require(`../../../../data/Image/${item.itemImage}`)}
+					alt={item.type}
+				/>
+				<p>Price : ৳ {item.price} </p>
+				<div className="btn actionBtn" onClick={() => setIsOpenModal(true)}>
+					<i className="fas fa-eye"></i>
+				</div>
+				<div className="btn actionBtn" onClick={() => setIsOpenModal(true)}>
+					<i className="fas fa-edit"></i>
+				</div>
+				<div className="btn actionBtn" onClick={() => setIsDeleteOpenModal(true)}>
+					<i className="fas fa-trash"></i>
+				</div>
 			</div>
 			<Modal
 				isOpen={isOpenModal}
@@ -39,8 +46,13 @@ function ItemComponent({ item }) {
 				<div className="detailsModal">
 					<h4>{item.itemName} </h4>
 					<div className="ImagePrice">
-						<img src={require(`../../../../data/Image/${item.itemImage}`)} alt={item.type} />
-						<p> <strong>Price :  ৳ {item.price} </strong> </p>
+						<img
+							src={require(`../../../../data/Image/${item.itemImage}`)}
+							alt={item.type}
+						/>
+						<p>
+							<strong>Price : ৳ {item.price} </strong>
+						</p>
 					</div>
 					<p>{item.description}</p>
 					<button
@@ -48,6 +60,27 @@ function ItemComponent({ item }) {
 						onClick={() => setIsOpenModal(false)}
 					>
 						Close
+					</button>
+				</div>
+			</Modal>
+			<Modal
+				isOpen={isDeleteOpenModal}
+				onRequestClose={() => setIsDeleteOpenModal(false)}
+				style={customStyles}
+			>
+				<div className="deleteModal">
+					<button
+						className="btn btn-sm btn-dark"
+						onClick={() => setIsDeleteOpenModal(false)}
+					>
+						Cancel
+					</button>
+					<button 
+						className="btn btn-sm btn-dark" 
+						onClick={() =>{
+							console.log('Confirm');
+					  }}>
+						Confirm
 					</button>
 				</div>
 			</Modal>

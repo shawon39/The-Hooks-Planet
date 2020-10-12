@@ -71,16 +71,17 @@ const checkValidation = (item) => {
 
 		if(field.getElementsByTagName("select").length) {
 			var selectedVal = field.getElementsByTagName("select");
-			if(selectedVal[0].options[selectedVal[0].selectedIndex].value == "DEFAULT") {
-				var node = document.createElement("P");
-				var nodeText = document.createTextNode("Fill up the required fields!");
+			var node, nodeText;
+			if(selectedVal[0].options[selectedVal[0].selectedIndex].value === "DEFAULT") {
+				node = document.createElement("P");
+				nodeText = document.createTextNode("Fill up the required fields!");
 				node.appendChild(nodeText);
 				field.prepend(node);
 			}
 		}
 		else if (!field.getElementsByTagName("input")[0].value) {
-			var node = document.createElement("P");
-			var nodeText = document.createTextNode("Fill up the required fields!");
+			node = document.createElement("P");
+			nodeText = document.createTextNode("Fill up the required fields!");
 			node.appendChild(nodeText);
 			field.prepend(node);
 		}
