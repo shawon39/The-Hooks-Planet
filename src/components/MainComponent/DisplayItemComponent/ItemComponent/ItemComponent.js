@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./ItemComponent.css";
 import Modal from "react-modal";
+import { ItemContext } from "../../../App";
 
 const customStyles = {
 	content: {
@@ -19,6 +20,8 @@ const customStyles = {
 function ItemComponent({ item }) {
 	const [isOpenModal, setIsOpenModal] = useState(false);
 	const [isDeleteOpenModal, setIsDeleteOpenModal] = useState(false);
+	// delete item
+	const itemContext = useContext(ItemContext);
 	return (
 		<React.Fragment>
 			<div className="myItem">
@@ -78,7 +81,7 @@ function ItemComponent({ item }) {
 					<button 
 						className="btn btn-sm btn-dark" 
 						onClick={() =>{
-							console.log('Confirm');
+							itemContext.itemDispatch({type: "deleteItem", itemId : item.Id, currentItem : item.type})
 					  }}>
 						Confirm
 					</button>

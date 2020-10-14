@@ -60,14 +60,23 @@ const reducer = (state, action) => {
 				myState.itemName.includes(action.searchKey)
 			);
 		}
-		case "filterPrice" : {
+		case "filterPrice": {
 			AllItems = initialState;
-			return AllItems = AllItems.filter((myState) => {
-				if(activeCategory === 'All') {
+			return (AllItems = AllItems.filter((myState) => {
+				if (activeCategory === "All") {
 					return myState.price <= action.itemPrice;
 				}
-				return (myState.type === activeCategory && myState.price <= action.itemPrice);
-			})
+				return (
+					myState.type === activeCategory && myState.price <= action.itemPrice
+				);
+			}));
+		}
+		case "deleteItem": {
+			AllItems = initialState;
+			activeCategory = action.currentItem;
+			return AllItems.filter((myState) => {
+				return myState.Id !== action.itemId && myState.type === activeCategory;
+			});
 		}
 		default: {
 			activeCategory = "All";
