@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/The-Hooks-Planet/static/css/main.08ae2c14.chunk.css",
-    "main.js": "/The-Hooks-Planet/static/js/main.bf76aede.chunk.js",
-    "main.js.map": "/The-Hooks-Planet/static/js/main.bf76aede.chunk.js.map",
+    "main.css": "/The-Hooks-Planet/static/css/main.a294a051.chunk.css",
+    "main.js": "/The-Hooks-Planet/static/js/main.7c95a41a.chunk.js",
+    "main.js.map": "/The-Hooks-Planet/static/js/main.7c95a41a.chunk.js.map",
     "runtime-main.js": "/The-Hooks-Planet/static/js/runtime-main.c7438f12.js",
     "runtime-main.js.map": "/The-Hooks-Planet/static/js/runtime-main.c7438f12.js.map",
     "static/js/2.772372fc.chunk.js": "/The-Hooks-Planet/static/js/2.772372fc.chunk.js",
     "static/js/2.772372fc.chunk.js.map": "/The-Hooks-Planet/static/js/2.772372fc.chunk.js.map",
     "index.html": "/The-Hooks-Planet/index.html",
-    "precache-manifest.258831ae44d6b5ace8f2b365f91332be.js": "/The-Hooks-Planet/precache-manifest.258831ae44d6b5ace8f2b365f91332be.js",
+    "precache-manifest.a5b96e5621c130bb3642725f17e721b3.js": "/The-Hooks-Planet/precache-manifest.a5b96e5621c130bb3642725f17e721b3.js",
     "service-worker.js": "/The-Hooks-Planet/service-worker.js",
-    "static/css/main.08ae2c14.chunk.css.map": "/The-Hooks-Planet/static/css/main.08ae2c14.chunk.css.map",
+    "static/css/main.a294a051.chunk.css.map": "/The-Hooks-Planet/static/css/main.a294a051.chunk.css.map",
     "static/js/2.772372fc.chunk.js.LICENSE.txt": "/The-Hooks-Planet/static/js/2.772372fc.chunk.js.LICENSE.txt",
     "static/media/1.png": "/The-Hooks-Planet/static/media/1.4139fdd5.png",
     "static/media/1.jpg": "/The-Hooks-Planet/static/media/1.ca1af137.jpg",
@@ -29,7 +29,7 @@
   "entrypoints": [
     "static/js/runtime-main.c7438f12.js",
     "static/js/2.772372fc.chunk.js",
-    "static/css/main.08ae2c14.chunk.css",
-    "static/js/main.bf76aede.chunk.js"
+    "static/css/main.a294a051.chunk.css",
+    "static/js/main.7c95a41a.chunk.js"
   ]
 }
