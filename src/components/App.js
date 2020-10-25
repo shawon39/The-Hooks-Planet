@@ -78,6 +78,20 @@ const reducer = (state, action) => {
 				return myState.Id !== action.itemId && myState.type === activeCategory;
 			});
 		}
+		case "editItem": {
+			AllItems = initialState;
+			activeCategory = action.item.type;
+			return AllItems.filter((myState) => {
+				if(myState.Id === action.item.Id) {
+					myState.itemName = action.item.itemName;
+					myState.type = action.item.type;
+					myState.price = action.item.price;
+					myState.itemImage = action.item.itemImage;
+					myState.description = action.item.description;
+				}
+				return myState.type === activeCategory;
+			});
+		}
 		default: {
 			activeCategory = "All";
 			return initialState;

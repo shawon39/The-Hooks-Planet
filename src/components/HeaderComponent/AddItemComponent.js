@@ -53,6 +53,7 @@ const reducer = (state, action) => {
 	}
 };
 
+// Validation check
 const removeErrors = () => {
 	const requiredFieldsFields = document.querySelectorAll(".requiredFields");
 	requiredFieldsFields.forEach((field) => {
@@ -88,6 +89,7 @@ const checkValidation = (item) => {
 	});
 	return false;
 };
+//Validation check End
 
 function AddItemComponent() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
