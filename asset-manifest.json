@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/The-Hooks-Planet/static/css/main.a294a051.chunk.css",
-    "main.js": "/The-Hooks-Planet/static/js/main.7c95a41a.chunk.js",
-    "main.js.map": "/The-Hooks-Planet/static/js/main.7c95a41a.chunk.js.map",
+    "main.js": "/The-Hooks-Planet/static/js/main.d5276eb0.chunk.js",
+    "main.js.map": "/The-Hooks-Planet/static/js/main.d5276eb0.chunk.js.map",
     "runtime-main.js": "/The-Hooks-Planet/static/js/runtime-main.c7438f12.js",
     "runtime-main.js.map": "/The-Hooks-Planet/static/js/runtime-main.c7438f12.js.map",
     "static/js/2.772372fc.chunk.js": "/The-Hooks-Planet/static/js/2.772372fc.chunk.js",
     "static/js/2.772372fc.chunk.js.map": "/The-Hooks-Planet/static/js/2.772372fc.chunk.js.map",
     "index.html": "/The-Hooks-Planet/index.html",
-    "precache-manifest.a5b96e5621c130bb3642725f17e721b3.js": "/The-Hooks-Planet/precache-manifest.a5b96e5621c130bb3642725f17e721b3.js",
+    "precache-manifest.cdeaf2054f4798e6cf84ec92f1557e1e.js": "/The-Hooks-Planet/precache-manifest.cdeaf2054f4798e6cf84ec92f1557e1e.js",
     "service-worker.js": "/The-Hooks-Planet/service-worker.js",
     "static/css/main.a294a051.chunk.css.map": "/The-Hooks-Planet/static/css/main.a294a051.chunk.css.map",
     "static/js/2.772372fc.chunk.js.LICENSE.txt": "/The-Hooks-Planet/static/js/2.772372fc.chunk.js.LICENSE.txt",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.c7438f12.js",
     "static/js/2.772372fc.chunk.js",
     "static/css/main.a294a051.chunk.css",
-    "static/js/main.7c95a41a.chunk.js"
+    "static/js/main.d5276eb0.chunk.js"
   ]
 }

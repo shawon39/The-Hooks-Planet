@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/The-Hooks-Planet/precache-manifest.a5b96e5621c130bb3642725f17e721b3.js"
+  "/The-Hooks-Planet/precache-manifest.cdeaf2054f4798e6cf84ec92f1557e1e.js"
 );
 
 self.addEventListener('message', (event) => {
